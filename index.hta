@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<HTA:APPLICATION
+	APPLICATIONNAME="Sentiment Analysis Of Online Reviews"
+	scroll="yes"
+	SINGLEINSTANCE="yes"
+	caption="yes"
+	windowState="maximize"
+>
+<head>
+<HTA:APPLICATION
+	APPLICATIONNAME="Sentiment Analysis Of Online Reviews"
+	scroll="yes"
+	SINGLEINSTANCE="yes"
+	caption="yes"
+	windowState="maximize"
+>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sentiment Analysis Of Online Reviews</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<script language="JavaScript" type="text/javascript">  
+         MyObject = new ActiveXObject( "WScript.Shell" )  
+         function RunTweet()   
+         {  
+           
+			shell = new ActiveXObject("WScript.shell");
+			shell.run("T_analysis.hta");
+        }  
+		function RunSentence()   
+         {  
+           
+			shell = new ActiveXObject("WScript.shell");
+			shell.run("S_Analysis.hta");
+        }  
+		</script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Sentiment Analysis Of Online Reviews</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Demo</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body" style="display: table-cell;
+    vertical-align: middle;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2"><br><br>
+                        <h1 class="brand-heading" style="text-align: center;display: table-cell;
+    vertical-align: middle;">Sentiment Analysis Of Online Reviews</h1><br><br>
+                      <center>  <p class="intro-text" style="text-align: center;display: table-cell;
+    vertical-align: middle;">An approach to classify the infomative text of social media.<br>Twitter Sentiment Analysis.</p><br><br>
+                        <a href="#about" class="btn btn-circle page-scroll" style="text-align: center;display: table-cell;
+    vertical-align: middle;">
+                            <i class="fa fa-angle-double-down animated" style="text-align: center;"></i>
+                        </a></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Sentiment Analysis</h2>
+                <p>The goal of sentiment analysis is to classify text samples according to their overall positivity or negativity.</p>
+                <p>We refer to the positivity or negativity of a text sample as its polarity.</p>
+                <p>In this project, we investigate three-class sentiment classiﬁcation of Twitter data where the labels are “positive”, “negative”, and “neutral”.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Demo</h2>
+                    <p>Click buttons to run online module of Twitter Analysis and offline module of Sentence Analyis.</p>
+                    <button type="button" onclick="RunTweet()" style="padding: 18px 27px;
+  font-size: 19px;
+  line-height: 1.3333333;
+  border-radius: 6px;"class="btn btn-default btn-lg">Twitter Analysis</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					<button type="button" onclick="RunSentence()" style="padding: 18px 27px;
+  font-size: 19px;
+  line-height: 1.3333333;
+  border-radius: 6px;"class="btn btn-default btn-lg">Sentence Analysis</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Us</h2>
+                <p>Feel free to email us to provide some feedback on our project, give us suggestions for new features to be added, or to just say hello!</p>
+                <p>Anurag Arora &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="mailto:anuragarora98@gmail.com">anuragarora98@gmail.com</a>
+				<p>&nbsp&nbsp&nbsp&nbsp Akshay Mathur &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="mailto:mathurakshay2604@gmail.com">mathurakshay2604@gmail.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Sentiment Analysis Of Online Reviews 2016</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>

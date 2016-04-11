@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+	MyObject=new ActiveXObject("WScript.shell");
+      function drawChart() {
+	//var contents;
+	//var fso=new ActiveXObject("Scripting.FileSystemobject");
+	//var fsh=fso.openTextFile("C:\\Users\\srm\\Desktop\\poscount.txt",2,false,0);
+	//contents = fsh.ReadAll();
+	var fso, fileHandle, contents, contents1,yourfilename;
+   fso = new ActiveXObject("Scripting.FileSystemObject");   
+   fileHandle = fso.OpenTextFile("E:\\dist\\poscount.txt", 1); 
+	fileHandle1 = fso.OpenTextFile("E:\\dist\\negcount.txt", 1);
+fileHandle2 = fso.OpenTextFile("E:\\dist\\neutralcount.txt", 1);
+   contents = fileHandle.ReadAll();                         
+contents1 = fileHandle1.ReadAll();
+contents2 = fileHandle2.ReadAll();
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Positive',     parseInt(contents)],
+          ['Neutral',      parseInt(contents2)],
+          //['Commute',  2],
+          //['Watch TV', 2],
+          ['Negative',    parseInt(contents1)]
+        ]);
+
+        var options = {
+          title: 'Sentiment Analysis Pie Chart'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body bgcolor=orange>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
